@@ -298,7 +298,6 @@
             </value>
         </inputAssignments>
         <object>Task</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Account</name>
@@ -356,7 +355,7 @@
             <targetReference>Get_Account</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>varAccountId</name>
         <dataType>String</dataType>
