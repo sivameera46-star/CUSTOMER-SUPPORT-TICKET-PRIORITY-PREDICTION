@@ -128,10 +128,20 @@ subagent ticket_priority_analysis:
               Use the Support Ticket Intelligence action to analyze the latest support ticket.
               The customer account name must come from the user's request.
               Do not invent customer, ticket, priority, assignment, or action information.
-              Use the values returned by the action when responding.
-              For High priority tickets, state that a high priority ticket was detected and that it was assigned to a senior support agent.
-              For Medium priority tickets, state that the ticket is medium priority and will be handled shortly.
-              For Low priority tickets, state that the ticket is low priority and queued for processing.
+              Never invent, alter, or omit the returned Ticket ID, Priority, Assigned Support Level, or Action.
+              After the action succeeds, respond using the exact returned values in this format:
+
+              Support Ticket Analysis
+
+              Account: <customer account name>
+              Ticket ID: <varTicketId>
+              Priority: <varPriorityLevel>
+              Assigned Support Level: <varAssignedTo>
+              Action: <varActionMessage>
+
+              For High priority, also state that a high-priority ticket was detected and assigned to a senior support agent.
+              For Medium priority, state that the ticket is medium priority and will be handled shortly.
+              For Low priority, state that the ticket is low priority and queued for processing.
 
         actions:
             analyze_support_ticket: @actions.support_ticket_intelligence
