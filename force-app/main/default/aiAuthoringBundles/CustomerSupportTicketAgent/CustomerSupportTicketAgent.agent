@@ -128,20 +128,36 @@ subagent ticket_priority_analysis:
               Use the Support Ticket Intelligence action to analyze the latest support ticket.
               The customer account name must come from the user's request.
               Do not invent customer, ticket, priority, assignment, or action information.
-              Never invent, alter, or omit the returned Ticket ID, Priority, Assigned Support Level, or Action.
-              After the action succeeds, respond using the exact returned values in this format:
+              After the Support Ticket Intelligence action completes successfully, the final response MUST include every non-empty output returned by the action.
 
-              Support Ticket Analysis
+              Do not summarize the action result into a shorter response.
 
-              Account: <customer account name>
-              Ticket ID: <varTicketId>
-              Priority: <varPriorityLevel>
-              Assigned Support Level: <varAssignedTo>
-              Action: <varActionMessage>
+              Use the returned output values directly.
 
-              For High priority, also state that a high-priority ticket was detected and assigned to a senior support agent.
-              For Medium priority, state that the ticket is medium priority and will be handled shortly.
-              For Low priority, state that the ticket is low priority and queued for processing.
+              The final response MUST contain these five lines:
+
+              Account: [the customer account name from the user's request]
+              Ticket ID: [the exact value returned in varTicketId]
+              Priority: [the exact value returned in varPriorityLevel]
+              Assigned Support Level: [the exact value returned in varAssignedTo]
+              Action: [the exact value returned in varActionMessage]
+
+              Do not omit Ticket ID.
+              Do not omit Priority.
+              Do not omit Assigned Support Level.
+              Do not omit Action.
+
+              Do not invent values.
+              Do not replace returned values with generic wording.
+
+              For High priority, after the five lines, state:
+              'A high-priority ticket was detected and assigned to a senior support agent.'
+
+              For Medium priority, after the five lines, state:
+              'The ticket is medium priority and will be handled shortly.'
+
+              For Low priority, after the five lines, state:
+              'The ticket is low priority and queued for processing.'
 
         actions:
             analyze_support_ticket: @actions.support_ticket_intelligence
