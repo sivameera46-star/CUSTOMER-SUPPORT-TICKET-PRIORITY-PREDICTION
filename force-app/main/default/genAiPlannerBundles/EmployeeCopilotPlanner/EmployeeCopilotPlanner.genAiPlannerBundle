@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Planner for support ticket priority analysis.</description>
+
+    <localTopicLinks>
+        <genAiPluginName>Support_Ticket_Priority_Analysis_16jjV000000VJMX</genAiPluginName>
+    </localTopicLinks>
+
+    <localTopics>
+        <fullName>Support_Ticket_Priority_Analysis_16jjV000000VJMX</fullName>
+        <canEscalate>false</canEscalate>
+        <description>This topic analyzes customer support tickets to determine priority based on issue description and urgency. It handles user requests related to ticket status, issue severity, and support prioritization.</description>
+        <developerName>Support_Ticket_Priority_Analysis_16jjV000000VJMX</developerName>
+
+        <genAiPluginInstructions>
+            <description>1. Ask for Account Name if it is not provided.
+
+2. Retrieve the latest support ticket for the Account.
+
+3. Read the ticket description.
+
+4. Determine priority.
+
+5. Set priority.
+
+6. If the ticket is High priority, trigger the backend automation.
+
+7. Assign the appropriate support level.
+
+8. Return the appropriate response.
+
+9. Do not directly update records or send emails.
+   Use Flow for actions.</description>
+            <developerName>instruction_1</developerName>
+            <language xsi:nil="true"/>
+            <masterLabel>Instruction 1</masterLabel>
+            <sortOrder>0</sortOrder>
+        </genAiPluginInstructions>
+
+        <language>en_US</language>
+
+        <localActionLinks>
+            <functionName>Support_Ticket_Intelligence_179jV000000ZQFl</functionName>
+        </localActionLinks>
+
+        <localActions>
+            <fullName>Support_Ticket_Intelligence_179jV000000ZQFl</fullName>
+            <description>Analyze customer support tickets based on the provided account name, determine ticket priority using issue description, and trigger automation to assign tasks for high-priority cases.</description>
+            <developerName>Support_Ticket_Intelligence_179jV000000ZQFl</developerName>
+            <invocationTarget>Support_Ticket_Intelligence</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+            <localDeveloperName>Support_Ticket_Intelligence</localDeveloperName>
+            <masterLabel>Support_Ticket_Intelligence</masterLabel>
+            <progressIndicatorMessage>Analyzing Ticket Details and determining Priority...</progressIndicatorMessage>
+        </localActions>
+
+        <localDeveloperName>Support_Ticket_Priority_Analysis</localDeveloperName>
+        <masterLabel>Support Ticket Priority Analysis</masterLabel>
+        <pluginType>Topic</pluginType>
+        <scope>Your job is only to analyze support ticket descriptions, determine the priority level (High, Medium, Low), and trigger backend automation for task assignment. Do not handle unrelated requests such as billing, subscription management, or account updates.</scope>
+    </localTopics>
+
+    <masterLabel>EmployeeCopilotPlanner</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlannerBundle>

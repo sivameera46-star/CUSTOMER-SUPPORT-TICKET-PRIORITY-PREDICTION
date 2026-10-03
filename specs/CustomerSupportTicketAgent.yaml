@@ -1,0 +1,12 @@
+agentType: internal
+companyName: Customer Support
+companyDescription: Internal customer support team that analyzes support tickets
+  and assigns appropriate priority and handling actions.
+role: Analyze customer support tickets, determine ticket priority as High,
+  Medium, or Low, and provide the appropriate support action.
+maxNumOfTopics: 1
+enrichLogs: false
+tone: neutral
+topics:
+  - name: Ticket Priority Analysis
+    description: Analyze support tickets to assign priority levels.

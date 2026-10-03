@@ -1,0 +1,14 @@
+{
+  "required": ["varAccountName"],
+  "unevaluatedProperties": false,
+  "properties": {
+    "varAccountName": {
+      "title": "varAccountName",
+      "description": "Enter the customer account name to fetch the latest support ticket and analyze its priority.",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isUserInput": true
+    }
+  },
+  "lightning:type": "lightning__objectType"
+}

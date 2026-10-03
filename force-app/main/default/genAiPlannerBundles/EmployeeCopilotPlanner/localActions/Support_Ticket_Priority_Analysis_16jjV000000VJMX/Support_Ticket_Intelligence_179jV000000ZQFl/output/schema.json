@@ -1,0 +1,51 @@
+{
+  "unevaluatedProperties": false,
+  "properties": {
+    "varAccountId": {
+      "title": "varAccountId",
+      "description": "Returns the unique identifiers of the customer account used to retrive the support ticket",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true,
+      "copilotAction:useHydratedPrompt": false
+    },
+    "varActionMessage": {
+      "title": "varActionMessage",
+      "description": " Displays the final message indicating ticket priority and actions taken by the system.",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true,
+      "copilotAction:useHydratedPrompt": false
+    },
+    "varAssignedTo": {
+      "title": "varAssignedTo",
+      "description": " Indicates the support agent or team assigned to handle the ticket.",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true,
+      "copilotAction:useHydratedPrompt": false
+    },
+    "varPriorityLevel": {
+      "title": "varPriorityLevel",
+      "description": "Represents the calculated ticket priority level (High, Medium, Low) based on issue description.",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true,
+      "copilotAction:useHydratedPrompt": false
+    },
+    "varTicketId": {
+      "title": "varTicketId",
+      "description": "Returns the unique identifier of the support ticket analyzed by the system.",
+      "lightning:type": "lightning__textType",
+      "lightning:isPII": false,
+      "copilotAction:isDisplayable": true,
+      "copilotAction:isUsedByPlanner": true,
+      "copilotAction:useHydratedPrompt": false
+    }
+  },
+  "lightning:type": "lightning__objectType"
+}
