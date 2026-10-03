@@ -234,8 +234,9 @@
         </rules>
     </decisions>
     <environments>Default</environments>
-    <interviewLabel>Support_Ticket_Intelligence {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Support_Ticket_Intelligence</label>
+    <interviewLabel>Support_Ticket_Intellegence {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Support_Ticket_Intellegence</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -288,6 +289,7 @@
             </value>
         </inputAssignments>
         <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
         <name>Get_Account</name>
